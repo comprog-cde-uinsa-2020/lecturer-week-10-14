@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include "lib/function.h"
 
-
 // function is point of 4
-void print_array(int array[], int arsize) {
+void print_array_int(int array[], int arsize) {
 
   // for loop (looping) is point of 3
   for (int index = 0; index < arsize; index++) {
@@ -14,7 +13,7 @@ void print_array(int array[], int arsize) {
 }
 
 // function is point of 4
-void change_value(int array[], int arsize) {
+void change_value_int(int array[], int arsize) {
 
   // for loop (looping) is point of 3
   for (int index = 0; index < arsize; index++) {
@@ -22,11 +21,13 @@ void change_value(int array[], int arsize) {
     // if else (branching) is point of 2
     if (array[index] % 2 == 0) {
         array[index] = array[index] * 2;
-        print_array(array, arsize);
+    } else {
+       printf("no number array of even \n");
     }
-
   }
 
+  printf("the result are>>");
+  print_array_int(array, arsize);
 }
 
 int main(void) {
@@ -40,12 +41,12 @@ int main(void) {
  printf("before the result \n");
 
  // calling function is point of 5, it is procedurall programming
- print_array(nuray, arsize);
+ print_array_int(nuray, arsize);
 
  printf("after the result \n");
 
  // calling function is point of 5, it is procedurall programming
- change_value(nuray, arsize);
+ change_value_int(nuray, arsize);
 
 
  return 0;
